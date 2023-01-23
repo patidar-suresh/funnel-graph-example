@@ -8,29 +8,22 @@ import "./styles.css";
 
 const data = {
   labels: [
-    "Leads",
-    "Cold calls and Email Campain",
-    "Sales Call",
-    "Engineering Deep Dive Discussion",
-    "Proposals",
-    "Project Win",
+    "dev_feature",
+    "dev_integration",
+    "qa_develop",
+    "qa_staging",
+    "pre_prod",
+    "us_b_prod",
   ],
-  subLabels: ["Web", "Call Center", "Facebook", "Google"],
-  colors: [
-    ["#FFB178", "#FF78B1", "#FF3C8E"],
-    ["#A0BBFF", "#EC77FF"],
-    ["#A0F9FF", "#7795FF"],
-    ["#A0F9FF", "#7795FF"],
-    ["#A0F9FF", "#7795FF"],
-    ["#A0F9FF", "#7795FF"],
-  ],
+  subLabels: ["Critical", "High", "Medium", "Low"],
+  colors: [["#780000"], ["#dc0000"], ["#fd8c00"], ["#fdc500"]],
   values: [
-    [2000, 1000, 700, 300],
-    [1500, 700, 300, 200],
-    [1200, 400, 230, 178],
-    [900, 158, 120, 97],
-    [300, 108, 73, 49],
-    [120, 70, 35, 15],
+    [30, 126, 200, 367],
+    [20, 78, 168, 200],
+    [10, 42, 75, 110],
+    [5, 10, 25, 35],
+    [2, 4, 10, 15],
+    [0, 1, 10, 5],
   ],
 };
 
@@ -44,7 +37,7 @@ class App extends Component {
       direction: "horizontal",
       width: 800,
       height: 350,
-      subLabelValue: "percent",
+      subLabelValue: "raw",
     });
 
     graph.draw();
